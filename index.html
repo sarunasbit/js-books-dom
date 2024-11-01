@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                <!-- Select, search, pages, filter button, reset button -->
+                <div class="row mb-3">
+                    <div class="col-12 col-lg-2 mb-2">
+                        <select class="form-select" id="form-select" aria-label="Default select example">
+                            <option selected value="All Categories">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 mb-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 mb-2">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="pagesInput" placeholder="Pages">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 mb-2">
+                        <button class="btn btn-outline-secondary w-100" type="button" id="filterButton">Filtruoti</button>
+                    </div>
+                    <div class="col-12 col-lg-1 mb-2">
+                        <button class="btn btn-outline-secondary w-100" type="button" id="search-reset-button"><i class="bi bi-arrow-clockwise"></i></button>
+                    </div>
+                </div>
+                <!-- Sorting buttons, min, max, calculate inventory value -->
+                <div class="row">
+                    <div class="col-12 col-lg-8 mb-2">
+                        <div class="btn-group d-flex flex-wrap" role="group" aria-label="Sorting and action buttons">
+                            <button type="button" class="btn btn-outline-secondary" id="sort-alpha-up"><i class="bi bi-sort-alpha-up"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" id="sort-alpha-down"><i class="bi bi-sort-alpha-down-alt"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" id="sort-numeric-up"><i class="bi bi-sort-numeric-up"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" id="sort-numeric-down"><i class="bi bi-sort-numeric-down-alt"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" id="find-min-price">Min</button>
+                            <button type="button" class="btn btn-outline-secondary" id="find-max-price">Max</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="modal" data-bs-target="#inventoryModal" id="calculate-Value">
+                            Apskaiciuoti inventoriaus verte
+                        </button>
+                    </div>
+                </div>
+                <!-- Books, categorys  -->
+                <div class="row" id="cards__main__body">
+                </div>
+            </main>
+
+            <!-- Inventory calculation window modal  -->
+            <div class="modal fade bd-example-modal-lg" id="inventoryModal" tabindex="-1" aria-labelledby="inventoryModalLabel" aria-hidden="true">>
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="inventoryModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ul class="list-group list-group-flush" id="modal-value-ul">
+                          </ul>
+                      </div>
+                      <div class="modal-footer">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    <script src="js/app.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

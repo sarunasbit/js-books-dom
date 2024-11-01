@@ -1,0 +1,39 @@
+.row{
+    margin: 1rem 0 1rem 0;
+
+}
+
+.cards__category h1 {
+    margin: 1rem 0;
+}
+
+.cards__wrapper {
+    display: flex;
+    margin: 3px;
+}
+
+.card {
+    flex-grow: 2;
+}
+
+.drop__down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (max-width: 1000px){
+    .cards__wrapper{
+        flex-direction: column;
+    }
+    .drop__down {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
+
+
+
+
+
